@@ -1,21 +1,12 @@
-class TaskCollection {
-	constructor(tasks = []) {
-		this.tasks = tasks;
-	}
-
-	prepare() {
-		this.tasks.forEach(task => {
-			console.log(this);
-		});
-	}
+function defalutDiscountRate() {
+	return .10;
 }
 
-class Task {
-	toGulp() {
-		console.log('converting to gulp');
-	}
-} 
+function applyDiscount(cost, discount = defalutDiscountRate()) {
 
-new TaskCollection([
-	new Task, new Task, new Task
-]).prepare();
+	// discount = discount || .10;
+	
+	return cost - (cost * discount);
+}
+
+alert(applyDiscount(100));
