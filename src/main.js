@@ -1,12 +1,29 @@
-function defalutDiscountRate() {
-	return .10;
+function sum(x, y) {
+	return x + y;
 }
 
-function applyDiscount(cost, discount = defalutDiscountRate()) {
+let nums = [1, 2];
 
-	// discount = discount || .10;
-	
-	return cost - (cost * discount);
-}
+console.log(sum(...nums));
 
-alert(applyDiscount(100));
+
+
+// function sum(...numbers) {
+// 	return numbers.reduce(function(prev, current) {
+// 		return prev + current;
+// 	});
+// }
+
+// console.log(sum(1, 2, 3));
+
+
+
+// the code below is a refactor of the above code (line 11)
+// function sum(...numbers) {
+// 	return numbers.reduce((prev, current) => prev + current);
+// }
+
+// console.log(sum(1, 2, 3));
+
+
+
