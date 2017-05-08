@@ -14,4 +14,4 @@
 }
 
 // like this
-// export default TaskCollection
+export default TaskCollection;
