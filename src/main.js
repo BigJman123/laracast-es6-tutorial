@@ -1,29 +1,25 @@
-function sum(x, y) {
-	return x + y;
-}
+let name = 'Foo';
 
-let nums = [1, 2];
+let template = `
+	<div class ="Alert">,
 
-console.log(sum(...nums));
+		<p>${name}</p>,
 
+	</div>
+`;
 
-
-// function sum(...numbers) {
-// 	return numbers.reduce(function(prev, current) {
-// 		return prev + current;
-// 	});
-// }
-
-// console.log(sum(1, 2, 3));
+console.log(template);
 
 
+// not sure what Vue js is but i copied this anyway
+// new Vue({
+// 	template: `
 
-// the code below is a refactor of the above code (line 11)
-// function sum(...numbers) {
-// 	return numbers.reduce((prev, current) => prev + current);
-// }
+// 		<div class="Alert">
+			
+// 			<p>Foobar</p>
 
-// console.log(sum(1, 2, 3));
+// 		</div>
 
-
-
+// `;
+// })
