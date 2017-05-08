@@ -1,98 +1,34 @@
-// object shorthand
+// class User {
+// 	constructor(username, email) {
+// 		this.username = username;
+// 		this.email = email;
+// 	}
 
-// function getPerson() {
-// 	let name = 'John';
+// 	static register(...args) {
+// 		return new User(...args);
+// 	}
 
-// 	let age = 25;
+// 	get foo() {
+// 		return 'foo';
+// 	}
 
-// 	return {
-// 		name,
-
-// 		age,
-
-// 		greet() { // ES6
-// 			return `Hello, ${this.name}`;
-
-// 			// return 'Hello, ' + this.name;
-// 		}
-
-// 	};
+// 	changeEmail(newEmail) {
+// 		this.email = newEmail;
+// 	}
 // }
 
-// alert(getPerson().greet());
+// let user = User.register('JeffreyWay', 'support@laracsts.com');
 
-// let { name, age } = person;
+// console.dir(user);
 
-// alert(name);
+// console.log(user.foo);
 
-
-
-
-
-// let data = {
-// 	name: 'Karen',
-// 	age: 32,
-// 	results: ['foo', 'bar'],
-// 	count: 30
-// };
-
-// let {results, count } = data;
-
-// console.log(results, count);
-
-
-
-
-
-// function getData({results, count}) {
-// 	// var results = data.results; // ES5
-// 	// var count = data.count;
-
-// 	console.log(results, count);
-// }
-
-// getData({
-// 	name: 'Karen', 
-// 	age: 32,
-// 	results: ['foo', 'bar'],
-// 	count: 30
-// });
-
-
-
-// This is the ES5 way
-// function greet(person) {
-// 	let name = person.name;
-// 	let age = person.age;
-
-// 	console.log('Hello, ' + name + '. You are ' + age);
-// }
-
-// greet({
-// 	name: 'Luke',
-// 	age: 24
-// })
-
-
-// This is the ES6 way
-function greet({name, age}) {
-	console.log(`Hello, ${name}. You are ${age}.`);
+function log(strategy) {
+	strategy.handle();
 }
 
-greet({
-	name: 'Luke',
-	age: 24
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
+log(new class {
+	handle() {
+		alert('Using the alert strategy to log');
+	}
+});
