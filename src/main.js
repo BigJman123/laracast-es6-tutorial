@@ -1,18 +1,34 @@
-class User {
-	constructor(name, isAdmin) {
-		this.name = name;
-		this.isAdmin = isAdmin;
+// function *numbers() {
+// 	console.log('Begin');
+
+// 	yield 1;
+// 	yield 2;
+// 	yield 3;
+// }
+
+// let iterator = numbers();
+
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+
+
+function *range(start, end) {
+	while(start <= end) {
+	
+		yield start;
+
+		start++
+
 	}
 }
 
-let users = [
-	new User('Jeffrey', false),
-	new User('Jane', true),
-	new User('Jack', false)
-];
+let iterator = range(1, 5);
+
+// console.log(iterator.next());
+
+// for (let i of iterator) console.log(i);
 
 console.log(
-
-	users.find(user => user.isAdmin).name
-
+	[...range(1, 5)]
 );
