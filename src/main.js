@@ -1,34 +1,19 @@
-// function *numbers() {
-// 	console.log('Begin');
+// let items = new Set (['one', 'two', 'three']);
 
-// 	yield 1;
-// 	yield 2;
-// 	yield 3;
-// }
-
-// let iterator = numbers();
-
-// console.log(iterator.next());
-// console.log(iterator.next());
-// console.log(iterator.next());
+// console.log(items);
 
 
-function *range(start, end) {
-	while(start <= end) {
-	
-		yield start;
 
-		start++
 
-	}
-}
+// let tags = ['php', 'javascript', 'vue', 'javascript'];
 
-let iterator = range(1, 5);
+// let set = new Set(tags);
 
-// console.log(iterator.next());
+// console.log(set);
 
-// for (let i of iterator) console.log(i);
 
-console.log(
-	[...range(1, 5)]
-);
+
+
+var mentionedUsers = ['johndoe', 'janedoe', 'janedoe'];
+
+console.log(new Set(mentionedUsers));
