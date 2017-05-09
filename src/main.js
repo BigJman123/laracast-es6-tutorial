@@ -1,12 +1,18 @@
-// you can import like this. you can import more than one item
-// import { TaskCollection, foo } from './TaskCollection';
-// or like this
-// import TaskCollection, { foo } from './TaskCollection';
-// or like this
-import TaskCollection from './TaskCollection';
+class User {
+	constructor(name, isAdmin) {
+		this.name = name;
+		this.isAdmin = isAdmin;
+	}
+}
 
-new TaskCollection([
-	'Go to store',
-	'Finish screencast',
-	'Eat cake'
-]).dump();  
+let users = [
+	new User('Jeffrey', false),
+	new User('Jane', true),
+	new User('Jack', false)
+];
+
+console.log(
+
+	users.find(user => user.isAdmin).name
+
+);
